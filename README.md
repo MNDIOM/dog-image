@@ -1,2 +1,2 @@
-# dog-image
+# dog-image homework
 API exercise
