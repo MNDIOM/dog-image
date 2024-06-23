@@ -1,2 +1,2 @@
 # dog-image
-exercise
+API exercise
