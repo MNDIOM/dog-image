@@ -5,7 +5,7 @@ let image = document.getElementById("dogImage")
 axios.get('https://dog.ceo/api/breeds/image/random')
   .then(response => {
     console.log(response.data);
-    image.src = response.data
+    image.src = response.data.message;
   })
   .catch(error => {
     console.log(error);
