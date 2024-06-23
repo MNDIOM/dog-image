@@ -10,7 +10,7 @@ const codeElement = document.createElement("code");
 
 button.addEventListener("click", async (event) => {
     const response = await axios({
-      url:  "https://dog.ceo/api/breeds/image/random/3",
+      url:"https://dog.ceo/api/breeds/image/random/3",
     });
   
     codeElement.innerText = JSON.stringify(response.data);
