@@ -1,27 +1,14 @@
-let button = document.getElementById("getDog")
+
+// //1 // Requesting with a different ID
+
 let image = document.getElementById("dogImage")
-const codeElement = document.createElement("code");
-
-// async function fetchDog() {
-//     let response = await axios.get("https://dog.ceo/api/breeds/image/random/3");
-//     console.log(response.data)
-//     image.src = response.data.message;
-// }
-
-button.addEventListener("click", async (event) => {
-    const response = await axios({
-      url:"https://dog.ceo/api/breeds/image/random/3",
-    });
-  
-    codeElement.innerText = JSON.stringify(response.data);
-    output.appendChild(codeElement);
+axios.get('https://dog.ceo/api/breeds/image/random')
+  .then(response => {
+    console.log(response.data);
+    image.src = response.data
+  })
+  .catch(error => {
+    console.log(error);
   });
-  
 
 
-// // button.addEventListener("click", async (event) => {
-// //     await fetchDog();
-// // })
-
-// // fetch first dog
-// fetchDog();
